@@ -1,0 +1,2 @@
+# Entropy
+Simple sentiment analyser
