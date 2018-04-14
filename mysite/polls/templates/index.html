@@ -1,15 +1,44 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="../static/css/index.css">
-</head>
-<body> 
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../static/css/user.css">
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+    <script src="../../static/js/tether.min.js"></script>
+    <script src="../../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../../static/js/vue.min.js"></script>
+    <script src="../../static/js/user.js"></script>
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Entropy</h3>
+            </div>
 
-<h2>What Can JavaScript Do?</h2> 
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="/stat/" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-stats"></i>
+                        Статистика
+                    </a>
+                </li>
+                <li>
+                    <a href="/swion/">
+                        <i class="glyphicon glyphicon-eye-open"></i>
+                        Подключить
+                    </a>
+                    <a href="/about/" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                        О сервисе
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-<p id="demo">Python.</p> 
+        <div id="content">
 
-<button type="button" onclick='document.getElementById("demo").innerHTML = "JavaScript!"'>Click Me!</button> 
-
-</body> 
+        </div>
+    </div>
+</body>
 </html>
