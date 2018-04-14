@@ -1,2 +1,6 @@
 venv
-
+.idea
+*.pyc
+cleaned_text.csv
+imdb.py
+ker.py
