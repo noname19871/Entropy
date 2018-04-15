@@ -34,7 +34,6 @@ i, span {
     SIDEBAR STYLE
 ----------------------------------------------------- */
 .wrapper {
-    color: whitesmoke;
     display: flex;
     align-items: stretch;
 }
@@ -128,7 +127,7 @@ ul.CTAs a {
 }
 
 a.article, a.article:hover {
-    background: #37474f !important;
+    background: c !important;
     color: #ffffff !important;
 }
 
@@ -139,6 +138,5 @@ a.article, a.article:hover {
 }
 
 zed {
-    width: 100%;
-    text-align: left;    
+color: #37474f; 
 }

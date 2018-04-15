@@ -74,5 +74,6 @@ mccabe==0.6.1
 pylint==1.8.4
 pytz==2018.4
 six==1.11.0
+whitenoise==3.3.1
 wrapt==1.10.11
 
