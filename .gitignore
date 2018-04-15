@@ -4,3 +4,5 @@ venv
 cleaned_text.csv
 imdb.py
 ker.py
+datasets
+models
