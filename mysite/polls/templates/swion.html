@@ -1,44 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="../../static/css/user.css">
-    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
-    <script src="../../static/js/tether.min.js"></script>
-    <script src="../../static/js/jquery-3.3.1.min.js"></script>
-    <script src="../../static/js/vue.min.js"></script>
-    <script src="../../static/js/user.js"></script>
-<body>
-    <div class="wrapper">
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>Entropy</h3>
-            </div>
+{% extends "left_bar.html" %}
 
-            <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="/stats/" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-stats"></i>
-                        Статистика
-                    </a>
-                </li>
-                <li>
-                    <a href="/swion/">
-                        <i class="glyphicon glyphicon-eye-open"></i>
-                        Подключить
-                    </a>
-                    <a href="/about/" data-toggle="collapse">
-                        <i class="glyphicon glyphicon-info-sign"></i>
-                        О сервисе
-                    </a>
-                </li>
-            </ul>
-        </nav>
+{% block content %}
 
-        <div id="content">
-            swion
-        </div>
-    </div>
-</body>
-</html>
+{% endblock %}
