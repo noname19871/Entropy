@@ -1,5 +1,19 @@
 {% extends "left_bar.html" %}
 
 {% block content %}
-
+<div>
+    <input type="radio" id="twitter"
+            name="contact" value="twitter" checked>
+    <label for="twitter">Twitter</label>
+    <input type="radio" id="rus"
+            name="contact" value="rus">
+    <label for="rus">Русское предложение</label>
+    <input type="radio" id="eng"
+            name="contact" value="eng">
+    <label for="eng">Английское предложение</label>
+    
+    <p><input type="text" size="40"></p>
+    
+    <button type="submit" class="btn btn-primary">Отправить</button>
+</div>
 {% endblock %}
