@@ -3,16 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="19d3050d-a07d-411e-9689-462cd2b03620" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/analytics.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/mysql.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neg.txt" beforeDir="false" afterPath="$PROJECT_DIR$/neg.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neut.txt" beforeDir="false" afterPath="$PROJECT_DIR$/neut.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pos.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analitics.db" beforeDir="false" afterPath="$PROJECT_DIR$/analitics.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kinopoisk.py" beforeDir="false" afterPath="$PROJECT_DIR$/kinopoisk.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/russian_news_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/russian_news_classifier.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/mysite/database.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="611">
-              <caret line="99" column="26" lean-forward="true" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
+              <caret line="99" column="26" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -66,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kinopoisk.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="kinopoisk.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kinopoisk.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-465">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+            <state relative-caret-position="257">
+              <caret line="95" column="42" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -81,17 +73,17 @@
       <file leaf-file-name="russian_news_classifier.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/russian_news_classifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="113" column="51" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
+            <state relative-caret-position="224">
+              <caret line="114" column="13" selection-start-line="114" selection-start-column="13" selection-end-line="114" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="twitter.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="twitter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/twitter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="69" selection-start-line="69" selection-end-line="69" selection-end-column="23" />
+            <state relative-caret-position="282">
+              <caret line="54" column="29" selection-start-line="49" selection-start-column="8" selection-end-line="54" selection-end-column="29" />
               <folding>
                 <element signature="e#2#13#0" expanded="true" />
               </folding>
@@ -136,12 +128,12 @@
         <option value="$PROJECT_DIR$/mysite/mysql.py" />
         <option value="$PROJECT_DIR$/twitter.py" />
         <option value="$PROJECT_DIR$/mysite/database.py" />
-        <option value="$PROJECT_DIR$/kinopoisk.py" />
         <option value="$PROJECT_DIR$/russian_news_classifier.py" />
+        <option value="$PROJECT_DIR$/kinopoisk.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="50" />
     <option name="width" value="1221" />
@@ -205,7 +197,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.kinopoisk">
+  <component name="RunManager" selected="Python.twitter">
     <configuration name="kinopoisk" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Entropy" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -305,8 +297,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.kinopoisk" />
         <item itemvalue="Python.twitter" />
+        <item itemvalue="Python.kinopoisk" />
         <item itemvalue="Python.mysql (2)" />
         <item itemvalue="Python.mysql (1)" />
         <item itemvalue="Python.mysql" />
@@ -346,7 +338,7 @@
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.3289256" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289256" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32838285" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32561985" />
       <window_info id="Favorites" order="2" sideWeight="0.5073892" side_tool="true" visible="true" weight="0.24944155" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -516,36 +508,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/twitter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="69" selection-start-line="69" selection-end-line="69" selection-end-column="23" />
-          <folding>
-            <element signature="e#2#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/database.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="611">
-          <caret line="99" column="26" lean-forward="true" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
+          <caret line="99" column="26" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/russian_news_classifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="113" column="51" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
+        <state relative-caret-position="224">
+          <caret line="114" column="13" selection-start-line="114" selection-start-column="13" selection-end-line="114" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kinopoisk.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-465">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        <state relative-caret-position="257">
+          <caret line="95" column="42" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/twitter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="54" column="29" selection-start-line="49" selection-start-column="8" selection-end-line="54" selection-end-column="29" />
+          <folding>
+            <element signature="e#2#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
