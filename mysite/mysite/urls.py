@@ -23,4 +23,6 @@ urlpatterns = [
     path('stats/', views.stats, name="stats"),
     path('about/', views.about, name="about"),
     path('swion/', views.swion, name="swion"),
+    path('model/', views.model, name="model"),
+    path(r'change_view/$', views.change_view, name='change_view'),
 ]
