@@ -23,7 +23,7 @@ def test(request):
     return render(request,'test.html')
 
 def get_data(request):
-    if 'data' in request.GET:
+    if request.method == 'GET':
         message = request.GET['data']
         res = russian_news_classifier.predict([message])
     else:
