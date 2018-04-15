@@ -1,7 +1,7 @@
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 
-from russian_news_classifier import predict
+from . import russian_news_classifier
 
 
 def index(request):
@@ -25,7 +25,7 @@ def test(request):
 def get_data(request):
     if 'data' in request.GET:
         message = request.GET['data']
-        res = predict([message])
+        res = russian_news_classifier.predict([message])
     else:
         res = 'You submitted nothing!'
 

@@ -2,7 +2,7 @@
 
 from nltk import word_tokenize
 import numpy as np
-import clear_text
+from . import clear_text
 import logging
 import re
 import json
