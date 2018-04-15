@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'polls',
+    'django_jinja',
 ]
 
 MIDDLEWARE = [
@@ -65,6 +66,32 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
         },
+    },
+    {
+        'NAME': 'jinja2',
+        'BACKEND': 'django_jinja.backend.Jinja2',
+        'DIRS': [os.path.join(BASE_DIR, "polls/templates")],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'autoescape': False,  # !!!!!!
+            "app_dirname": "jinja2",
+            "match_extension": ".html",
+            "newstyle_gettext": True,
+            "translation_engine": "django.utils.translation",
+            "extensions": [
+                "jinja2.ext.do",
+                "jinja2.ext.loopcontrols",
+                "jinja2.ext.with_",
+                "jinja2.ext.i18n",
+                "jinja2.ext.autoescape",
+                "django_jinja.builtins.extensions.CsrfExtension",
+                "django_jinja.builtins.extensions.CacheExtension",
+                "django_jinja.builtins.extensions.TimezoneExtension",
+                "django_jinja.builtins.extensions.UrlsExtension",
+                "django_jinja.builtins.extensions.StaticFilesExtension",
+                "django_jinja.builtins.extensions.DjangoFiltersExtension",
+            ],
+        }
     },
 ]
 
@@ -117,6 +144,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
+
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
