@@ -38,7 +38,9 @@ def parse_url(cnt):
     driver = webdriver.Firefox(firefox_binary=FirefoxBinary('/home/empire/firefox/firefox'),
                                executable_path='/usr/local/bin/geckodriver')
     driver.get("https://twitter.com/russia")
-
+    many = {'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т',
+            'у',
+            'ф', 'ь', 'ъ', 'х', 'ц', 'ч', 'ш', 'щ', 'ы', 'э', 'я', 'ю', ' '}
     driver.get("https://www.kinopoisk.ru/reviews/type/comment/period/month/page/1/#list")
     while (j <= cnt):
         html = get_html(j, driver)
@@ -49,22 +51,48 @@ def parse_url(cnt):
         for x in neg:
             name = x.find('p', 'profile_name').get_text()
             text = x.find('span', '_reachbanner_').get_text().replace('\n', ' ')
-            database.new_rec((name,"Горбатая гора", text, russian_news_classifier.predict([text])[0][0]),
+            text = x.find('span', '_reachbanner_').get_text().replace('.', ' ')
+            text = x.find('span', '_reachbanner_').get_text().replace('?', ' ')
+            text = x.find('span', '_reachbanner_').get_text().replace('!', ' ')
+            text = text.lower()
+
+            res = ""
+            for k in range(len(text)):
+                if text[k] in many:
+                    res += text[k]
+            database.new_rec((name,"Горбатая гора", res, russian_news_classifier.predict([res])[0][0]),
                              'usersKINONEG')
 
         neut = soup.findAll("div", 'response')
         for x in neut:
             name = x.find('p', 'profile_name').get_text()
             text = x.find('span', '_reachbanner_').get_text().replace('\n', ' ')
-            database.new_rec((name, "Горбатая гора", text, russian_news_classifier.predict([text])[0][1]),
-                             'usersKINONET')
+            text = x.find('span', '_reachbanner_').get_text().replace('.', ' ')
+            text = x.find('span', '_reachbanner_').get_text().replace('?', ' ')
+            text = x.find('span', '_reachbanner_').get_text().replace('!', ' ')
+            text = text.lower()
 
+            res = ""
+            for k in range(len(text)):
+                if text[k] in many:
+                    res += text[k]
+            database.new_rec((name, "Горбатая гора", res, russian_news_classifier.predict([res])[0][1]),
+                             'usersKINONET')
 
         pos = soup.findAll("div", 'response good')
         for x in pos:
             name = x.find('p', 'profile_name').get_text()
             text = x.find('span', '_reachbanner_').get_text().replace('\n', ' ')
-            database.new_rec((name, "Горбатая гора", text, russian_news_classifier.predict([text])[0][2]),
+            text = x.find('span', '_reachbanner_').get_text().replace('.', ' ')
+            text = x.find('span', '_reachbanner_').get_text().replace('?', ' ')
+            text = x.find('span', '_reachbanner_').get_text().replace('!', ' ')
+            text = text.lower()
+
+            res = ""
+            for k in range(len(text)):
+                if text[k] in many:
+                    res += text[k]
+            database.new_rec((name, "Горбатая гора", res, russian_news_classifier.predict([res])[0][2]),
                              'usersKINOPOS')
 
 

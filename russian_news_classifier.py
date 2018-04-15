@@ -112,5 +112,5 @@ def predict(str_array):
         str_array[i] = ru_token(str_array[i])
         tmp = getAvgFeatureVecs([str_array[i]],model,200)
         avg.append(classifier.predict_proba(tmp)[0])
-
+    print(avg)
     return avg
