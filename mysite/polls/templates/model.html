@@ -1,0 +1,18 @@
+{% extends "left_bar.html" %}
+
+{% block content %}
+    <input type="radio" id="twitter"
+            name="contact" value="twitter" checked>
+    <label for="twitter">Twitter</label>
+    <input type="radio" id="rus"
+            name="contact" value="rus">
+    <label for="rus">Текст на русском</label>
+    <input type="radio" id="eng"
+            name="contact" value="eng">
+    <label for="eng">Текст на английском</label>
+
+    <form action="/get_data/"  method="get" >
+    <p><input id='text' type="text" size="40" name="data"></p>
+    <p><input type="submit"value="Отправить"/></p>
+    </form>
+{% endblock %}

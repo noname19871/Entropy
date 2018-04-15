@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../static/css/user.css">
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/web-fonts-with-css/css/fontawesome-all.min.css">
+    <script src="../../static/js/tether.min.js"></script>
+    <script src="../../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../../static/js/vue.min.js"></script>
+    <script src="../../static/js/user.js"></script>
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Entropy</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="/stats/" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-stats"></i>
+                        Статистика
+                    </a>
+                    <ul class="collapse list-unstyled" id="statsSubmenu">
+                        <li><a href="#">
+                            <i class="fab fa-telegram-plane"></i>
+                                telegram
+                            </a>
+                        </li>
+                        <li><a href="#">
+                            <i class="fab fa-twitter"></i>
+                                twittor
+                            </a>
+                        </li>
+                        <li><a href="#">
+                            <i class="fab fa-vk"></i>
+                                vk
+                            </a>
+                        </li>
+                        <li><a href="#">
+                            <i class="fab fa-youtube"></i>
+                                youtube
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="/swion/" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-eye-open"></i>
+                        Загрузить данные
+                    </a>
+                    <ul class="collapse list-unstyled" id="swionSubmenu">
+                        <li><a href="#">
+                            <i class="fab fa-telegram-plane"></i>
+                                telegram
+                            </a>
+                        </li>
+                        <li><a href="#">
+                            <i class="fab fa-twitter"></i>
+                                twittor
+                            </a>
+                        </li>
+                        <li><a href="#">
+                            <i class="fab fa-vk"></i>
+                                vk
+                            </a>
+                        </li>
+                        <li><a href="#">
+                            <i class="fab fa-youtube"></i>
+                                youtube
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="/model/" data-toggle="collapse">
+                        <i class="fas fa-rocket"></i>
+                        Запустить модель
+                    </a>
+                    <a href="/about/" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                        О сервисе
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>
