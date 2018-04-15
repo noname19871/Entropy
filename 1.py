@@ -48,7 +48,7 @@ def get_html(url, tag):
     # Get scroll height
     last_height = driver.execute_script("return document.body.scrollHeight")
 
-    cnt = 1
+    cnt = 400
     while cnt > 0:
         # Scroll down to bottom
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
@@ -67,21 +67,38 @@ def get_html(url, tag):
 def parse_url(html):
     soup = BeautifulSoup(html, 'html.parser')
     table = soup.findAll("p", 'TweetTextSize js-tweet-text tweet-text')
+    nicks = soup.findAll("span", 'username u-dir u-textTruncate')
     #print(table)
+    ind = 1
+    fout = open('tweets.txt', 'w', encoding='utf-8')
     for x in table:
-        p = re.compile(r'(@[А-Яа-я]+)|([^0-9А-Яа-я-. \t])|(.\d+)')
+        p = re.compile(r'([^a-zA-Z ])')
     #    xtext = x.get_text()
 
     #    print(xtext, '\n')
         x1 = x.get_text()
         i = x1.find('#')
-        before_comma = x1[:i] if i != -1 else x1
-        bf = re.sub(r'[\d]|[a-z]|\/', r'', before_comma)
-        print(bf, '\n')
+      #  before_comma = x1[:i] if i != -1 else x1
+       # bf = re.sub(r'[\d]|[a-z]|\/', r'', before_comma)
+        k = 0
+        bf = ""
+        x1 = x1.lower()
+        many = {'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'ь', 'ъ', 'х', 'ц', 'ч', 'ш', 'щ', 'ы', 'э', 'я', 'ю', ' ', '.', '?'}
+        while (k < len(x1)):
+            if (x1[k] in many):
+                bf += x1[k]
+            k+=1
+        bf.replace('\n', ' ')
+        bf = nicks[ind].get_text() + ";" + bf
+        fout.write(bf)
+        fout.write('\n')
+        ind+=1
         #print(type(x))
    # rows = table.find_all("p")
     projects = []
     print(len(table))
+    print(len(nicks))
+    fout.close()
   #  for row in rows:
   #      cols = row.find_all('p')
   #      projects.append({
