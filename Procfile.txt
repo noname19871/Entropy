@@ -1,1 +1,0 @@
-web: gunicorn mysite/manage.py --log-file -

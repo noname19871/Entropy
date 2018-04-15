@@ -114,6 +114,3 @@ def predict(str_array):
         avg.append(classifier.predict_proba(tmp)[0])
 
     return avg
-
-
-print(predict(["оригинальное название хорошее содержание как и напутствие на титульнике.книги рекомендуем", "Отличный день"]))
