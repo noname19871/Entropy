@@ -106,11 +106,14 @@ def train():
 def predict(str_array):
     model = gensim.models.FastText.load('models/news/model.model')
     classifier = joblib.load('models/news/classifier.joblib.pkl')
+
     avg = []
     for i in range(len(str_array)):
         str_array[i] = ru_token(str_array[i])
-        avg = getAvgFeatureVecs([str_array[i]],model,200)
-        print(classifier.predict(avg))
+        tmp = getAvgFeatureVecs([str_array[i]],model,200)
+        avg.append(classifier.predict_proba(tmp)[0])
+
+    return avg
 
 
-predict(["плохой день, но лучший на этой недел", "Отличный день"])
+print(predict(["плохой день, но лучший на этой недел", "Отличный день"]))

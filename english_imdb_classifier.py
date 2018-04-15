@@ -70,20 +70,15 @@ def train():
     classifier.fit(train_arrays, train_labels)
     joblib.dump(classifier, model_filename, compress=3)
 
+def predict(str_array):
+    model = Doc2Vec.load('models/imdb/word2vec.d2v')
+    classifier = joblib.load('models/imdb/classifier.joblib.pkl')
 
-train()
-model = Doc2Vec.load('models/imdb/word2vec.d2v')
-classifier = joblib.load('models/imdb/classifier.joblib.pkl')
+    avg = []
+    for i in range(len(str_array)):
+        str_array[i] = str_array[i].split()
+        tmp = model.infer_vector(str_array[i])
+        avg.append(classifier.predict_proba(tmp.reshape(1,-1))[0][1])
 
-test_arrays = numpy.zeros((25000, 100))
-test_labels = numpy.zeros(25000)
-for i in range(12500):
-    prefix_test_pos = 'TEST_POS_' + str(i)
-    prefix_test_neg = 'TEST_NEG_' + str(i)
-    test_arrays[i] = model[prefix_test_pos]
-    test_arrays[12500 + i] = model[prefix_test_neg]
-    test_labels[i] = 1
-    test_labels[12500 + i] = 0
+    return avg
 
-for i in range(25000):
-    print(classifier.predict(test_arrays[i].reshape(1, -1)))
