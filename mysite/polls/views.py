@@ -1,5 +1,7 @@
-from django.http import HttpResponse
+from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
+
+import russian_news_classifier
 
 
 def index(request):
@@ -17,5 +19,14 @@ def swion(request):
 def model(request):
     return render(request,'model.html')
 
-def change_view(request):
-    return request.data[text]
+def test(request):
+    return render(request,'test.html')
+
+def get_data(request):
+    if 'data' in request.GET:
+        message = request.GET['data']
+        res = russian_news_classifier.predict([message])
+    else:
+        res = 'You submitted nothing!'
+
+    return HttpResponse(res)

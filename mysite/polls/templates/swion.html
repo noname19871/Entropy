@@ -11,9 +11,11 @@
     <input type="radio" id="eng"
             name="contact" value="eng">
     <label for="eng">Английское предложение</label>
-    
-    <p><input id='text' type="text" size="40"></p>
-    <button id="send" class="btn btn-primary">Отправить</button>
+
+    <form action="/get_data/"  method="get" >
+    <p><input id='text' type="text" size="40" name="data"></p>
+    <p><input type="submit"value="Отправить"/></p>
+    </form>
     
 </div>
 {% endblock %}
