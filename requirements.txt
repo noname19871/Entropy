@@ -58,7 +58,7 @@ termcolor==1.1.0
 tqdm==4.22.0
 ubuntu-drivers-common==0.0.0
 ufw==0.35
-urllib3==1.13.1
+urllib3==1.26.5
 Werkzeug==0.14.1
 xkit==0.0.0
 astroid==1.6.3
