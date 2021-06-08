@@ -28,7 +28,7 @@ numpy==1.14.2
 onboard==1.2.0
 pandas==0.22.0
 pexpect==4.0.1
-Pillow==3.1.2
+Pillow==8.2.0
 protobuf==3.5.2.post1
 ptyprocess==0.5
 pycups==1.9.73
